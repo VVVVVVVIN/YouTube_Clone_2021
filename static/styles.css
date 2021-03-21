@@ -180,7 +180,7 @@ textarea,
 
 button {
   border: none;
-  background-color: #3498db;
+  background-color: #5cb978;
   color: white; }
 
 button.delete {
@@ -191,10 +191,10 @@ input[type="submit"] {
   cursor: pointer; }
 
 .header {
-  background-color: #ea232c;
+  background-color: #ff8800;
   margin-bottom: 50px; }
   .header .header__wrapper {
-    padding: 5px 0px;
+    padding: 10px 0px;
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
@@ -240,11 +240,11 @@ input[type="submit"] {
   flex-direction: column;
   align-items: center; }
   .footer .footer__icon {
-    color: rgba(0, 0, 0, 0.2);
+    color: #ff8800;
     font-size: 40px;
     margin-bottom: 20px; }
   .footer .footer__text {
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 800;
     text-transform: uppercase; }
 
@@ -335,6 +335,8 @@ input[type="submit"] {
     .video-detail__container .video__info button {
       width: 100px;
       margin-bottom: 25px; }
+    .video-detail__container .video__info .video__author a {
+      color: #004966; }
     .video-detail__container .video__info .video__title,
     .video-detail__container .video__info .video__views,
     .video-detail__container .video__info .video__description {
