@@ -14,13 +14,16 @@
     color: white;
     position: absolute;
     z-index: 9;
-    bottom: 5px;
+    bottom: 0px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 16px;
+    .videoPlayer__column {
+      opacity: 0.8;
+    }
     .videoPlayer__column:first-child {
       display: flex;
       align-items: center;
