@@ -148,16 +148,30 @@ var recorderContainer = document.getElementById("jsRecordContainer");
 var recordBtn = document.getElementById("jsRecordBtn");
 var videoPreview = document.getElementById("jsVideoPreview");
 var streamObject;
+var videoRecorder;
 
 var handleVideoData = function handleVideoData(event) {
-  console.log(event);
+  var videoFile = event.data;
+  var link = document.createElement("a");
+  link.href = URL.createObjectURL(videoFile);
+  link.download = "recorded.webm";
+  document.body.appendChild(link);
+  link.click();
+};
+
+var stopRecording = function stopRecording() {
+  videoRecorder.stop();
+  recordBtn.removeEventListener("click", stopRecording);
+  recordBtn.addEventListener("click", getVideo);
+  recordBtn.innerHTML = "Start recording";
 };
 
 var startRecording = function startRecording() {
   console.log(streamObject);
-  var videoRecorder = new MediaRecorder(streamObject);
-  videoRecorder.start();
+  videoRecorder = new MediaRecorder(streamObject);
+  videoRecorder.start(1000);
   videoRecorder.addEventListener("dataavailable", handleVideoData);
+  recordBtn.addEventListener("click", stopRecording);
 };
 
 var getVideo = /*#__PURE__*/function () {
@@ -191,7 +205,7 @@ var getVideo = /*#__PURE__*/function () {
           case 12:
             _context.prev = 12;
             _context.t0 = _context["catch"](0);
-            recordBtn.innerHTML = "😫 Can't record";
+            recordBtn.innerHTML = "😫 No Camera No record";
 
           case 15:
             _context.prev = 15;
