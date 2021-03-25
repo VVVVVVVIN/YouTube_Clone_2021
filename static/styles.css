@@ -426,6 +426,17 @@ input[type="submit"] {
       width: 100%; }
       .video-detail__container .video__comments .add__comment input {
         width: 100%; }
+    .video-detail__container .video__comments .video__comments-list {
+      margin-top: 10px; }
+      .video-detail__container .video__comments .video__comments-list li {
+        background-color: #444444;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px; }
+        .video-detail__container .video__comments .video__comments-list li:not(:last-child) {
+          margin-bottom: 5px; }
 
 .user-profile {
   width: 100%;

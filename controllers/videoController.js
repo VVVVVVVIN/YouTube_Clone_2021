@@ -2,6 +2,8 @@ import routes from "../routes";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
 
+// Home
+
 export const home = async (req, res) => {
   try {
     const videos = await Video.find({}).sort({ _id: -1 });
@@ -11,6 +13,9 @@ export const home = async (req, res) => {
     res.render("Home", { pageTitle: "Home", videos: [] });
   }
 };
+
+// Search
+
 export const search = async (req, res) => {
   const {
     query: { term: searchingBy },
@@ -25,6 +30,9 @@ export const search = async (req, res) => {
   }
   res.render("Search", { pageTitle: "Search", searchingBy, videos });
 };
+
+// Upload
+
 export const getUpload = (req, res) =>
   res.render("Upload", { pageTitle: "Upload" });
 
@@ -44,6 +52,8 @@ export const postUpload = async (req, res) => {
   res.redirect(routes.videoDetail(newVideo.id));
 };
 
+// Video Detail
+
 export const videoDetail = async (req, res) => {
   const {
     params: { id },
@@ -57,6 +67,8 @@ export const videoDetail = async (req, res) => {
     res.redirect(routes.home);
   }
 };
+
+// Edit Video
 
 export const getEditVideo = async (req, res) => {
   const {
@@ -87,6 +99,8 @@ export const postEditVideo = async (req, res) => {
   }
 };
 
+// Delete Video
+
 export const deleteVideo = async (req, res) => {
   const {
     params: { id },
@@ -116,8 +130,7 @@ export const postRegisterView = async (req, res) => {
     video.save();
     res.status(200);
   } catch (error) {
-    res.statusCode(400);
-    res.end();
+    res.status(400);
   } finally {
     res.end();
   }

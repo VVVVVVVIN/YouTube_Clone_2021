@@ -45,5 +45,19 @@
         width: 100%;
       }
     }
+    .video__comments-list {
+      margin-top: 10px;
+      li {
+        background-color: $black;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
 }
