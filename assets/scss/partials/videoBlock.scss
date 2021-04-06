@@ -2,10 +2,20 @@
   video {
     margin-bottom: 10px;
     max-width: 100%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
   }
   .videoBlock__title {
-    font-size: 18px;
-    font-weight: 300;
+    color: rgb(255, 60, 93);
+    font-size: 30px;
+    font-weight: 600;
     margin-bottom: 10px;
+  }
+  .videoBlock__views {
+    color: royalblue;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
