@@ -1,11 +1,11 @@
 import express from "express";
 import routes from "../routes";
-import { 
-    usersDetail, 
-    getEditProfile, 
-    postEditProfile,
-    getChangePassword,
-    postChangePassword
+import {
+  usersDetail,
+  getEditProfile,
+  postEditProfile,
+  getChangePassword,
+  postChangePassword,
 } from "../controllers/userController";
 import { onlyPrivate, uploadAvatar } from "../middlewares";
 
@@ -19,5 +19,3 @@ userRouter.post(routes.changePassword, onlyPrivate, postChangePassword);
 userRouter.get(routes.userDetail(), usersDetail);
 
 export default userRouter;
-
-

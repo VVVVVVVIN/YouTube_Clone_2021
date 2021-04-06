@@ -10,9 +10,9 @@ const volumeRange = document.getElementById("jsVolume");
 const registerView = () => {
   const videoId = window.location.href.split("/videos/")[1];
   fetch(`/api/${videoId}/view`, {
-    method: "POST"
-  })
-}
+    method: "POST",
+  });
+};
 
 function handlePlayClick() {
   if (videoPlayer.paused) {
@@ -112,6 +112,17 @@ function handleDrag(event) {
     volumeBtn.innerHTML = '<i class="fas fa-volume-off"></i>';
   }
 }
+
+function handleScreenPlay() {
+  if (videoPlayer.paused) {
+    videoPlayer.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+  } else {
+    videoPlayer.pause();
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+  }
+}
+
 function init() {
   videoPlayer.volume = 0.5;
   playBtn.addEventListener("click", handlePlayClick);
@@ -120,10 +131,9 @@ function init() {
   videoPlayer.addEventListener("loadedmetadata", setTotalTime);
   videoPlayer.addEventListener("ended", handleEnded);
   volumeRange.addEventListener("input", handleDrag);
+  videoPlayer.addEventListener("click", handleScreenPlay);
 }
 
 if (videoContainer) {
   init();
 }
-
-

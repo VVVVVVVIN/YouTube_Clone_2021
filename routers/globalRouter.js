@@ -9,7 +9,7 @@ import {
   postGithubLogIn,
   postJoin,
   postLogin,
-  getMe
+  getMe,
 } from "../controllers/userController";
 import { home, search } from "../controllers/videoController";
 import { onlyPrivate, onlyPublic } from "../middlewares";

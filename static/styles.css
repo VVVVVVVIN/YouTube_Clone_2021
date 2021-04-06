@@ -319,7 +319,8 @@ input[type="submit"] {
   .videoPlayer video {
     height: 100%;
     width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    cursor: unset; }
   .videoPlayer .videoPlayer__controls {
     opacity: 0;
     transition: opacity 0.4s linear;
