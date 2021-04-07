@@ -1,5 +1,5 @@
 mixin videoBlock(video = {})
-    .videoBlock
+    .videoBlock#jsPreview
         a(href=routes.videoDetail(video.id))
             video.videoBlock__thumbnail(src=`/${video.videoFile}`, controls=false)
             h4.videoBlock__title=video.title

@@ -1,20 +1,21 @@
 .videoBlock {
   video {
+    display: flex;
     margin-bottom: 10px;
     max-width: 100%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
+    border-radius: 10%;
+    border: 3px;
+    border-color: rgba(121, 121, 121, 0.733);
+    border-style: solid;
   }
   .videoBlock__title {
-    color: rgb(255, 60, 93);
+    color: rgb(29, 71, 197);
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
   }
   .videoBlock__views {
-    color: royalblue;
+    color: #000000;
     font-size: 20px;
     font-weight: 700;
   }

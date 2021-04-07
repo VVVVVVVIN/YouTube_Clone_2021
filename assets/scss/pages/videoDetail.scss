@@ -48,6 +48,9 @@
     .video__comments-list {
       margin-top: 10px;
       li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $black;
         color: white;
         padding: 5px;
@@ -58,6 +61,9 @@
           margin-bottom: 5px;
         }
       }
+    }
+    .comment__Delete {
+      display: flex;
     }
   }
 }
